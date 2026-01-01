@@ -17,7 +17,7 @@ import Footer from "@/components/common/Footer";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <PopularCategoriesSlider />
       <WhoWeAre />
@@ -31,7 +31,7 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <BlogSection />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

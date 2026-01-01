@@ -1,25 +1,166 @@
 @import "tailwindcss";
 
+/* =====================
+   Root Variables
+===================== */
 :root {
+  /* --background: #000000; */
   --background: #f5f5f5;
   --foreground: #000000;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #f5f5f5;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+img {
+  image-rendering: smooth;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+/* =====================
+   Base Styles
+===================== */
+
+@theme {
+  --color-white: oklch(100% 0 0);
+  --color-black: oklch(0% 0 0);
+  --color-primary: oklch(97.02% 0 0); /*#F5F5F5*/
+  --color-secondary: oklch(58.56% 0.2254 26.77); /*#E31E25*/
+  --color-textPrimary: oklch(26.95% 0.1212 269.91); /*#121B60*/
+  --color-textSecondary: oklch(15.91% 0 0); /*#0D0D0D*/
+  --color-textGray: oklch(39.42% 0 0); /*#464646*/
+  --color-textFaq: oklch(26.86% 0 0); /*#262626*/
+
+  /* font size */
+  --text-pxs: 0.75rem; /* 12px */
+  --text-psm: 4.375rem; /* 70px */
+  --text-dt: 0.875rem; /* 14px */
+  --text-pbase: 1rem; /* 16px */
+  --text-plg: 1.125rem; /* 18px */
+  --text-pxl: 1.25rem; /* 20px */
+  --text-p2xl: 1.5rem; /* 24px */
+  --text-smh: 1.75rem; /* 28px */
+  --text-p3xl: 1.875rem; /* 30px */
+  --text-t2: 2.125rem; /* 34px */
+  --text-p4xl: 2.25rem; /* 36px */
+  --text-hsubp: 2.5rem; /* 40px */
+  --text-h: 2.6475rem; /* 42.36px */
+  --text-p5xl: 3.25rem; /* 48px */
+  --text-p6xl: 3.75rem; /* 60px */
+  --text-p7xl: 4.5rem; /* 72px */
+  --text-p8xl: 6rem; /* 96px */
+  --text-heroHeading: 7.125rem; /* 96px */
+  --text-p9xl: 8rem; /* 128px */
+
+  /* line height */
+  --leading-psm: 2rem; /*32px*/
+
+  /* height */
+  --height-heroimge: 37.25rem; /*596px*/
+  --height-psm: 2rem;
+  --height-pmd: 3rem;
+  --height-plg: 4rem;
+  --height-aem: 5em;
+  --height-ism: 25rem;
+  --height-imd: 28.125rem;
+  --height-ilg: 34.375rem;
+  --height-ixl: 45.625rem;
+  --height-i: 18.75rem;
+  --height-lh: 3.938rem; /*63px*/
+  --height-bh: 15rem; /*240px*/
+  --height-dh: 20.639rem; /*330.22px*/
+  --height-story: 44.813rem; /*765px*/
+  /* width */
+  --width-psm: 2rem; /* 32px */
+  --width-lw: 8.938rem; /*143px */
+  --width-pmd: 3rem; /* 48px */
+  --width-plg: 4rem;
+  --width-bw: 18.125rem; /*290px*/
+  --width-dw: 20.639rem; /*330.22px*/
+  --width-bp: 440px;
+  --width-story: 50.938rem; /*815px*/
+
+  /* padding */
+  --padding-xs: 0.25rem; /* 4px */
+  --padding-sm: 0.5rem; /* 8px */
+  --padding-md: 1rem; /* 16px */
+  --padding-lg: 1.5rem; /* 24px */
+  --padding-xl: 2rem; /* 32px */
+  --padding-axl: 3.5rem; /* 56px */
+  --padding-2xl: 4rem; /* 64px */
+  --padding-pbn: 5.5rem; /* 88px */
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
+
+/* =====================
+   Responsive Font Scaling
+   (Use carefully)
+===================== */
+@media (min-width: 768px) and (max-width: 1300px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1301px) and (max-width: 1500px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1550px) and (max-width: 1800px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1901px) and (max-width: 2100px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 2101px) and (max-width: 2500px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 2501px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+/* =====================
+   Layout Utility
+===================== */
+.wrapper {
+  max-width: 90rem; /* 1440px */
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 90rem;
+  }
 }
