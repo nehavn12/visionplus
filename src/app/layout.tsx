@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Baskervville } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/common/Footer";
 
 /* Baskervville font – Figma font */
 const baskervville = Baskervville({
@@ -22,6 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body
         className={`
           ${baskervville.className}
@@ -32,7 +37,9 @@ export default function RootLayout({
           text-black
         `}
       >
+        <Navbar />
         {children}
+        {/* <Footer /> */}
       </body>
     </html>
   );

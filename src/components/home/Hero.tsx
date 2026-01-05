@@ -8,7 +8,7 @@ export default function Hero() {
         {/* Same width as header */}
         <div className="w-full mx-auto">
           {/* Rounded hero container */}
-          <div className="relative overflow-hidden rounded-3xl min-h-[calc(100vh-120px)]">
+          <div className="relative overflow-hidden rounded-4xl min-h-[calc(100vh-120px)] ">
             {/* Background image */}
             <div className="absolute inset-0 bg-[url('/images/hero-banner.webp')] bg-cover bg-center" />
 
@@ -16,9 +16,9 @@ export default function Hero() {
             <div className="absolute inset-0" />
 
             {/* Content */}
-            <div className="relative z-10 h-full max-w-360 mx-auto flex items-center">
+            <div className="wrapper relative z-10 h-full max-w-360 mx-auto flex items-center">
               <div className="h-full flex pt-62 pb-16 max-md:pt-32 max-md:pb-12">
-                <div className="text-white py-40 max-md:py-10 max-md:px-4">
+                <div className="text-white py-36 max-md:py-10 ">
                   {/* HEADING */}
                   <h1
                     className="
@@ -49,6 +49,7 @@ export default function Hero() {
                     <span className="hidden max-md:block">
                       Franchise solutions across India.
                     </span>
+                    <br />
                     <span className="max-md:hidden">
                       Franchise solutions across India.
                     </span>

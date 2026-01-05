@@ -33,25 +33,25 @@ export default function Navbar() {
       {/* BACKGROUND LAYER */}
       <div
         className={`
-          transition-all duration-300
+          transition-all duration-300 
           ${scrolled ? "bg-white shadow-md" : "bg-transparent"}
         `}
       >
         {/* OUTER WRAPPER */}
         <div
           className={`
-            mx-auto transition-all duration-300
-            ${scrolled ? "w-full" : "max-w-360 px-6 lg:px-10"}
+            mx-auto flex justify-center   transition-all duration-300 
+            ${scrolled ? "w-full" : "w-full px-6 lg:px-10"}
           `}
         >
           {/* NAVBAR CARD */}
           <div
             className={`
-              flex items-center justify-between transition-all duration-300
+              flex wrapper w-full items-center justify-between transition-all duration-300
               ${
                 scrolled
-                  ? "px-6 lg:px-10 py-4 rounded-b-2xl"
-                  : "bg-white px-8 py-4 mt-10 rounded-2xl shadow-md"
+                  ? "px-4  py-4 rounded-b-2xl"
+                  : "bg-white px-4 py-4 mt-10 rounded-2xl shadow-md"
               }
             `}
           >
@@ -61,6 +61,7 @@ export default function Navbar() {
               alt="Vision Plus Healthcare"
               width={134}
               height={72}
+              unoptimized
               priority
             />
 

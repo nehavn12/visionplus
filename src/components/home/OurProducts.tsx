@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import SectionHeader from "../common/SectionHeader";
 import "swiper/css";
 
 const products = [
@@ -18,11 +19,11 @@ const products = [
 
 export default function OurProducts() {
   return (
-    <section className="py-20">
-      <div className="max-w-360 mx-auto px-6">
+    <section className="py-20 bg-primary ">
+      <div className=" wrapper mx-auto ">
         {/* Header */}
         <div className="flex items-center justify-between mb-14">
-          <h2 className="text-[40px] font-semibold">Our Products</h2>
+          <SectionHeader heading="Our Products" />
 
           <button className="bg-[#E31E25] text-white px-8 py-3 rounded-[10px] text-[18px] hover:bg-red-700 transition">
             View All
@@ -32,6 +33,8 @@ export default function OurProducts() {
         {/* Slider */}
         <Swiper
           modules={[Autoplay]}
+          loop={true}
+          loopAdditionalSlides={4}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -46,17 +49,18 @@ export default function OurProducts() {
           {products.map((product, index) => (
             <SwiperSlide key={index}>
               <div className="text-center">
-                <div className="">
+                <div className="mb-6 relative w-[20.875rem] h-[25rem] overflow-hidden p-5 shadow-xl">
                   <Image
                     src={product.image}
                     alt={product.name}
-                    width={330}
-                    height={400}
-                    className="object-contain mx-auto"
+                    fill
+                    className="object-contain mx-auto "
                   />
                 </div>
 
-                <p className="text-[22px] font-bold">{product.name}</p>
+                <p className="text-[22px] leading-[1.4000] font-bold align-middle text-textSecondary">
+                  {product.name}
+                </p>
               </div>
             </SwiperSlide>
           ))}

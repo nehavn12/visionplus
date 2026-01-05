@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionHeader from "../common/SectionHeader";
 
 const features = [
   { label: "25+ years experience", icon: "/images/icons/experience.svg" },
@@ -25,26 +26,24 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-white py-20">
-      <div className="max-w-360 mx-auto px-6">
+    <section className="bg-white py-20  border-black">
+      <div className="wrapper mx-auto">
         {/* Top content */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
-          <div className="lg:col-span-9">
-            <h2 className="text-[40px] font-semibold mb-4">
-              Trusted Pharmaceutical Manufacturer & Supplier
-            </h2>
-
-            <p className="text-[18px] text-black">
-              Vision Plus Healthcare are a well known Manufacturer, Supplier and
+        <div className="grid grid-cols-1 lg:grid-cols-12 mb-16 ">
+          <div className="lg:col-span-8 lg:mb-0 mb-8">
+            <SectionHeader
+              heading="Trusted Pharmaceutical Manufacturer & Supplier"
+              description=" Vision Plus Healthcare are a well known Manufacturer, Supplier and
               Trader of Pharmaceutical Products. Being an ISO 9001:2008
               certified company, we adopt stringent quality control process,
               which ensure supreme quality of drugs. Our products meet all the
               quality norms of Pharmaceutical industry and thus satisfy the
-              needs of our precious clients.
-            </p>
+              needs of our precious clients."
+              descriptionCss="text-[18px] leading-[1.5] font-medium tracking-[2%] align-middle text-black lg:w-[90%]"
+            />
           </div>
 
-          <div className="lg:col-span-3 flex lg:justify-end items-center">
+          <div className="lg:col-span-4 flex lg:justify-end items-center ">
             <button className="bg-[#E31E25] text-white px-8 py-3 rounded-[10px] text-[18px] hover:bg-red-700 transition">
               Get In Touch!
             </button>
@@ -52,14 +51,21 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Icons grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-10 gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-16 gap-y-16">
           {features.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center gap-4"
+              className="flex flex-col items-center text-center gap-4 "
             >
-              <Image src={item.icon} alt="" width={80} height={80} />
-              <p className="text-[24px] text-[#464646] font-semiboldleading-snug">
+              <Image
+                src={item.icon}
+                alt=""
+                width={82}
+                height={82}
+                unoptimized
+              />
+              {/* <p className="text-[24px] text-[#464646] font-semiboldleading-snug"> */}
+              <p className="text-[24px] leading-[1.5] font-semibold tracking-[2%] align-middle text-textGray px-2">
                 {item.label}
               </p>
             </div>
