@@ -14,6 +14,21 @@ const menuItems = [
   "Blog",
 ];
 
+const header = {
+  headerImage: "",
+  menu: [
+    "Home",
+    "Company",
+    "Products",
+    "Visual Aid",
+    "Franchise",
+    "Calculators",
+    "Blog",
+  ],
+  buttonName: "",
+  buttonLink: "",
+};
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -47,7 +62,7 @@ export default function Navbar() {
           {/* NAVBAR CARD */}
           <div
             className={`
-              flex wrapper w-full items-center justify-between transition-all duration-300
+              flex wrapper w-full items-center justify-between transition-all duration-300 
               ${
                 scrolled
                   ? "px-4  py-4 rounded-b-2xl"
@@ -56,14 +71,16 @@ export default function Navbar() {
             `}
           >
             {/* LOGO */}
-            <Image
-              src="/images/logo.webp"
-              alt="Vision Plus Healthcare"
-              width={134}
-              height={72}
-              unoptimized
-              priority
-            />
+            <div className=" relative h-14 sm:h-18 w-26 sm:w-33.5 overflow-hidden ">
+              <Image
+                src="/images/logo.webp"
+                alt="Vision Plus Healthcare"
+                unoptimized
+                priority
+                fill
+                className=" object-cover"
+              />
+            </div>
 
             {/* DESKTOP MENU */}
             <nav className="hidden lg:flex items-center gap-8 text-[16px] font-semibold text-black">
@@ -79,7 +96,7 @@ export default function Navbar() {
             </nav>
 
             {/* ACTIONS */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 ">
               <button className="hidden md:block bg-[#E31E25] text-white px-10 py-3 rounded-full text-[16px] font-medium hover:bg-red-700 transition">
                 Contact Us
               </button>

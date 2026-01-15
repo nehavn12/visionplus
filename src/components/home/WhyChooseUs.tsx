@@ -2,7 +2,7 @@ import Image from "next/image";
 import SectionHeader from "../common/SectionHeader";
 export default function WhyChooseUs() {
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative py-16 bg-white overflow-hidden">
       {/* WORLD MAP BACKGROUND */}
       <div className="absolute inset-0 flex justify-center items-center opacity-10 pointer-events-none">
         <Image src="/images/world-map.svg" alt="" width={900} height={500} />

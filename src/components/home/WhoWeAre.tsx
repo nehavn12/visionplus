@@ -41,7 +41,7 @@ export default function WhoWeAre() {
           {stats.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.05)] p-8 max-md:p-5"
+              className="bg-white rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.05)] p-8 max-md:p-5"
             >
               <h3 className="text-[4rem] max-md:text-[2.5rem] align-middle leading-[1.2031] font-semibold text-textPrimary">
                 {item.value}

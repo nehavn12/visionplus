@@ -19,7 +19,7 @@ const products = [
 
 export default function OurProducts() {
   return (
-    <section className="py-20 bg-primary ">
+    <section className="py-16 bg-primary ">
       <div className=" wrapper mx-auto ">
         {/* Header */}
         <div className="flex items-center justify-between mb-14">

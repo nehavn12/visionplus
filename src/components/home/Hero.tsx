@@ -9,12 +9,8 @@ export default function Hero() {
         <div className="w-full mx-auto">
           {/* Rounded hero container */}
           <div className="relative overflow-hidden rounded-4xl min-h-[calc(100vh-120px)] ">
-            {/* Background image */}
             <div className="absolute inset-0 bg-[url('/images/hero-banner.webp')] bg-cover bg-center" />
-
-            {/* Overlay */}
             <div className="absolute inset-0" />
-
             {/* Content */}
             <div className="wrapper relative z-10 h-full max-w-360 mx-auto flex items-center">
               <div className="h-full flex pt-62 pb-16 max-md:pt-32 max-md:pb-12">
@@ -22,11 +18,11 @@ export default function Hero() {
                   {/* HEADING */}
                   <h1
                     className="
-                    text-[48px] md:text-[70px]
-                    max-md:text-[30px]
-                    leading-22.5 max-md:leading-tight
-                    font-normal
-                  "
+                      text-[48px] md:text-[70px]
+                      max-md:text-[30px]
+                      leading-22.5 max-md:leading-tight
+                      font-normal
+                    "
                   >
                     Trusted Manufacturing for <br />
                     <span className="capitalize">
@@ -37,12 +33,12 @@ export default function Hero() {
                   {/* DESCRIPTION */}
                   <p
                     className="
-                    mt-6 text-[26px]
-                    max-md:text-[15px]
-                    max-md:mt-4
-                    leading-relaxed
-                    font-normal
-                  "
+                      mt-6 text-[26px]
+                      max-md:text-[15px]
+                      max-md:mt-4
+                      leading-relaxed
+                      font-normal
+                    "
                   >
                     Offering end-to-end pharmaceutical manufacturing and
                     <br className="hidden max-md:block" />
@@ -57,16 +53,16 @@ export default function Hero() {
 
                   {/* BUTTONS */}
                   <div className="mt-10 max-md:mt-6 flex flex-wrap gap-5 max-md:flex-col">
-                    <button className="bg-white text-black px-7 py-3 rounded-full text-[15px] flex items-center gap-3 w-fit">
+                    <button className="bg-white text-black pl-7 pr-3 h-14 rounded-full text-lg leading-[1.25] align-middle font-semibold flex items-center gap-3 w-fit">
                       Send Enquiry
-                      <span className="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center">
+                      <span className="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center ml-6">
                         <ArrowIcon />
                       </span>
                     </button>
 
-                    <button className="border border-white text-white px-7 py-3 rounded-full text-[15px] flex items-center gap-3 w-fit hover:bg-white hover:text-black transition">
+                    <button className=" border-white border text-white pl-7 pr-3 h-14 rounded-full text-lg leading-[1.25] align-middle font-semibold flex items-center gap-3 w-fit">
                       Download Price list
-                      <span className="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center">
+                      <span className="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center ml-4">
                         <ArrowIcon />
                       </span>
                     </button>
