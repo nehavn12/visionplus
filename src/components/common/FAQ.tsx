@@ -8,7 +8,7 @@ import { GoChevronRight } from "react-icons/go";
 
 const faq = {
   heading: "FAQ’S",
-  subHeading: "Instant Questions",
+  subHeading: "VisionPlus Healthcare PCD Pharma Franchise",
   faqData: [
     {
       question: "What is VisionPlus Healthcare?",
